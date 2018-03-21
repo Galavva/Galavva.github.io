@@ -20,12 +20,11 @@
 <body ng-app="">
 
   <div class="header text-center">
-    <h1>Mega Travel</h1>
-    <img src"images/megaTravelLogo.jpg" alt="Mega Travel">
+    <img src="images/megaTravelLogo.jpg" alt="Mega Travel" style="width:15%;">
   </div>
 
-    <div class="container">
-        See destination activities
+    <div id="activities" class="container-fluid text-center">
+        <h3>See destination activities</h3>
         <select ng-model="destinations">
           <option value=""></option>
           <option value="australia">Brisbane, Australia</option>
@@ -188,7 +187,7 @@
          <div class="carousel-inner">
 
             <div class="item active">
-              <img src="images/museum.jpeg" alt="Museum" style="width:90%;">
+              <img src="images/museum.jpeg" alt="Museum" style="width:100%;">
               <div class="carousel-caption">
                 <h3>Museum</h3>
               </div>
@@ -225,8 +224,8 @@
            <span class="glyphicon glyphicon-chevron-right"></span>
            <span class="sr-only">Next</span>
          </a>
+        </div>
       </div>
-    </div>
     </div>
 
 
@@ -339,6 +338,11 @@
       </div>
     </div>
   </div>
+</div>
+</div>
+
+<div id="theForm" class="container-fluid text-center">
+    <p>text</p>
 </div>
 
 

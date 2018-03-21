@@ -1,0 +1,21 @@
+#activities {
+  background-color: #f08e38;
+  padding:50px;
+}
+
+#activities p {
+}
+
+#theForm {
+  background-color: #2a3dab;
+}
+
+#theForm p {
+  color: white;
+  padding:50px;
+}
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
