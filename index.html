@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mega Travel</title>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- angularjs -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<!-- main stylesheet-->
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body ng-app="">
+
+  <div class="header text-center">
+    <h1>Mega Travel</h1>
+    <img src"images/megaTravelLogo.jpg" alt="Mega Travel">
+  </div>
+
+    <div class="container">
+        See destination activities
+        <select ng-model="destinations">
+          <option value=""></option>
+          <option value="australia">Brisbane, Australia</option>
+          <option value="canada">Vancouver, Canada</option>
+          <option value="us">New York City, United States</option>
+          <option value="germany">Berlin, Germany</option>
+          <option value="mexico">Cancun, Mexico</option>
+        </select>
+      </form>
+
+
+      <div ng-switch="destinations">
+        <div ng-switch-when="australia">
+          <div class="container">
+           <h2>Brisbane, Australia</h2>
+           <div id="ausCarousel" class="carousel slide" data-ride="carousel">
+             <!-- Indicators -->
+             <ol class="carousel-indicators">
+               <li data-target="#ausCarousel" data-slide-to="0" class="active"></li>
+               <li data-target="#ausCarousel" data-slide-to="1"></li>
+               <li data-target="#ausCarousel" data-slide-to="2"></li>
+               <li data-target="#ausCarousel" data-slide-to="3"></li>
+               <li data-target="#ausCarousel" data-slide-to="4"></li>
+             </ol>
+
+             <!-- Wrapper for slides -->
+             <div class="carousel-inner">
+
+               <div class="item active">
+                 <img src="images/cityTour.jpg" alt="City Tours" style="width:100%;">
+                 <div class="carousel-caption">
+                   <h3>City Tour</h3>
+                 </div>
+               </div>
+
+               <div class="item">
+                 <img src="images/sports.jpeg" alt="Sports" style="width:100%;">
+                 <div class="carousel-caption">
+                   <h3>Sports</h3>
+                 </div>
+               </div>
+
+               <div class="item">
+                 <img src="images/cycling.jpg" alt="Cycling" style="width:100%;">
+                 <div class="carousel-caption">
+                   <h3>Cycling</h3>
+                 </div>
+               </div>
+
+               <div class="item">
+                 <img src="images/museum.jpeg" alt="Museum" style="width:100%;">
+                 <div class="carousel-caption">
+                   <h3>Museum</h3>
+                 </div>
+               </div>
+
+               <div class="item">
+                 <img src="images/boating.jpg" alt="Boating" style="width:100%;">
+                 <div class="carousel-caption">
+                   <h3>Boating</h3>
+                 </div>
+               </div>
+
+             </div>
+
+             <!-- Left and right controls -->
+             <a class="left carousel-control" href="#ausCarousel" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="sr-only">Previous</span>
+             </a>
+             <a class="right carousel-control" href="#ausCarousel" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right"></span>
+               <span class="sr-only">Next</span>
+             </a>
+          </div>
+        </div>
+
+    </div>
+
+
+    <div ng-switch-when="canada">
+      <div class="container">
+       <h2>Vancouver, Canada</h2>
+       <div id="canCarousel" class="carousel slide" data-ride="carousel">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+           <li data-target="#canCarousel" data-slide-to="0" class="active"></li>
+           <li data-target="#canCarousel" data-slide-to="1"></li>
+           <li data-target="#canCarousel" data-slide-to="2"></li>
+           <li data-target="#canCarousel" data-slide-to="3"></li>
+           <li data-target="#canCarousel" data-slide-to="4"></li>
+         </ol>
+
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+
+           <div class="item active">
+             <img src="images/museum.jpeg" alt="Museums" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Museum</h3>
+             </div>
+           </div>
+
+           <div class="item">
+             <img src="images/sailing.jpg" alt="Sailing" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Sailing</h3>
+             </div>
+           </div>
+
+           <div class="item">
+             <img src="images/beach.jpeg" alt="Beach" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Beaches</h3>
+             </div>
+           </div>
+
+           <div class="item">
+             <img src="images/hiking.jpg" alt="Hiking" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Hiking</h3>
+             </div>
+           </div>
+
+           <div class="item">
+             <img src="images/boating.jpg" alt="Boating" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Boating</h3>
+             </div>
+           </div>
+         </div>
+
+         <!-- Left and right controls -->
+         <a class="left carousel-control" href="#canCarousel" data-slide="prev">
+           <span class="glyphicon glyphicon-chevron-left"></span>
+           <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#canCarousel" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right"></span>
+           <span class="sr-only">Next</span>
+         </a>
+      </div>
+    </div>
+    </div>
+
+
+    <div ng-switch-when="us">
+      <div class="container">
+       <h2>New York City, United States</h2>
+       <div id="usCarousel" class="carousel slide" data-ride="carousel">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+           <li data-target="#usCarousel" data-slide-to="0" class="active"></li>
+           <li data-target="#usCarousel" data-slide-to="1"></li>
+           <li data-target="#usCarousel" data-slide-to="2"></li>
+           <li data-target="#usCarousel" data-slide-to="3"></li>
+         </ol>
+
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+
+            <div class="item active">
+              <img src="images/museum.jpeg" alt="Museum" style="width:90%;">
+              <div class="carousel-caption">
+                <h3>Museum</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="images/theatre.jpg" alt="Theatre" style="width:100%;">
+              <div class="carousel-caption">
+                <h3>Theatre</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="images/parks.jpg" alt="Parks and Recreation" style="width:100%;">
+              <div class="carousel-caption">
+                <h3>Parks and recreation</h3>
+              </div>
+            </div>
+
+           <div class="item">
+             <img src="images/cityTour.jpg" alt="City Tours" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>City Tour</h3>
+             </div>
+           </div>
+         </div>
+
+         <!-- Left and right controls -->
+         <a class="left carousel-control" href="#usCarousel" data-slide="prev">
+           <span class="glyphicon glyphicon-chevron-left"></span>
+           <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#usCarousel" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right"></span>
+           <span class="sr-only">Next</span>
+         </a>
+      </div>
+    </div>
+    </div>
+
+
+    <div ng-switch-when="germany">
+      <div class="container">
+       <h2>Berlin, Germany</h2>
+       <div id="gerCarousel" class="carousel slide" data-ride="carousel">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+           <li data-target="#gerCarousel" data-slide-to="0" class="active"></li>
+           <li data-target="#gerCarousel" data-slide-to="1"></li>
+           <li data-target="#gerCarousel" data-slide-to="2"></li>
+         </ol>
+
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+
+            <div class="item active">
+              <img src="images/museum.jpeg" alt="Museum" style="width:100%;">
+              <div class="carousel-caption">
+                <h3>Museum</h3>
+              </div>
+            </div>
+
+           <div class="item">
+             <img src="images/cityTour.jpg" alt="City Tours" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>City Tour</h3>
+             </div>
+           </div>
+
+
+           <div class="item">
+             <img src="images/cycling.jpg" alt="Cycling" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Cycling</h3>
+             </div>
+           </div>
+         </div>
+
+
+         <!-- Left and right controls -->
+         <a class="left carousel-control" href="#gerCarousel" data-slide="prev">
+           <span class="glyphicon glyphicon-chevron-left"></span>
+           <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#gerCarousel" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right"></span>
+           <span class="sr-only">Next</span>
+         </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div ng-switch-when="mexico">
+      <div class="container">
+       <h2>Cancun, Mexico</h2>
+       <div id="mexCarousel" class="carousel slide" data-ride="carousel">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+           <li data-target="#mexCarousel" data-slide-to="0" class="active"></li>
+           <li data-target="#mexCarousel" data-slide-to="1"></li>
+           <li data-target="#mexCarousel" data-slide-to="2"></li>
+           <li data-target="#mexCarousel" data-slide-to="3"></li>
+
+         </ol>
+
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+
+           <div class="item active">
+             <img src="images/parks.jpg" alt="Parks and Recreation" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Parks and recreation</h3>
+             </div>
+           </div>
+
+           <div class="item">
+             <img src="images/beach.jpeg" alt="Beach" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Beaches</h3>
+             </div>
+           </div>
+
+           <div class="item">
+             <img src="images/boating.jpg" alt="Boating" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Boating</h3>
+             </div>
+           </div>
+
+           <div class="item">
+             <img src="images/snorkeling.jpg" alt="Snorkeling" style="width:100%;">
+             <div class="carousel-caption">
+               <h3>Snorkeling</h3>
+             </div>
+           </div>
+
+           <!-- Left and right controls -->
+           <a class="left carousel-control" href="#mexCarousel" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+             <span class="sr-only">Previous</span>
+           </a>
+           <a class="right carousel-control" href="#mexCarousel" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+             <span class="sr-only">Next</span>
+           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
