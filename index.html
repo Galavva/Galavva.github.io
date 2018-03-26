@@ -343,7 +343,7 @@
 </div>
 
 <div id="theForm" class="container-fluid text-center" ng-app="infoForm" ng-controller="formCont">
-  <form class="" action="index.html" method="post">
+  <form class="" action="index.html" method="">
     <p>First Name:  <input type="text" ng-model="user.firstName" placeholder="First Name" style="max-width:90px;" required></p>
     <p>Last Name: <input type="text" ng-model="user.lastName" placeholder="Last Name" style="max-width:90px;" required></p>
     <p>Email: <input type="email" ng-model="user.email" placeholder="youremail@email.com" required></p>
@@ -362,7 +362,7 @@
 //Reset button
 var app = angular.module('infoForm', []);
 app.controller('formCont', function($scope) {
-    $scope.master = {firstName: "", lastName: "", email="", phone="", children="", adults="", start="", end=""};
+    $scope.master = {firstName: "", lastName: "", email:"", phone:"", children:"", adults:"", start:"", end:""};
     $scope.reset = function() {
         $scope.user = angular.copy($scope.master);
     };
