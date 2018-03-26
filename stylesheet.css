@@ -10,9 +10,13 @@
   background-color: #2a3dab;
 }
 
-#theForm p {
+#theForm {
   color: white;
   padding:50px;
+}
+
+input, button {
+  color: black;
 }
 
 .carousel .item {

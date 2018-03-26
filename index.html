@@ -25,15 +25,16 @@
 
     <div id="activities" class="container-fluid text-center">
         <h3>See destination activities</h3>
-        <select ng-model="destinations">
-          <option value=""></option>
-          <option value="australia">Brisbane, Australia</option>
-          <option value="canada">Vancouver, Canada</option>
-          <option value="us">New York City, United States</option>
-          <option value="germany">Berlin, Germany</option>
-          <option value="mexico">Cancun, Mexico</option>
-        </select>
-      </form>
+          <form>
+            <select ng-model="destinations">
+              <option value=""></option>
+              <option value="australia">Brisbane, Australia</option>
+              <option value="canada">Vancouver, Canada</option>
+              <option value="us">New York City, United States</option>
+              <option value="germany">Berlin, Germany</option>
+              <option value="mexico">Cancun, Mexico</option>
+            </select>
+          </form>
 
 
       <div ng-switch="destinations">
@@ -341,11 +342,32 @@
 </div>
 </div>
 
-<div id="theForm" class="container-fluid text-center">
-    <p>text</p>
+<div id="theForm" class="container-fluid text-center" ng-app="infoForm" ng-controller="formCont">
+  <form class="" action="index.html" method="post">
+    <p>First Name:  <input type="text" ng-model="user.firstName" placeholder="First Name" required></p>
+    <p>Last Name: <input type="text" ng-model="user.lastName" placeholder="Last Name" required></p>
+    <p>Email: <input type="email" ng-model="user.email" placeholder="youremail@email.com" required></p>
+    <p>Phone Number: <input type="tel" ng-model="user.phone" placeholder="xxx-xxx-xxxx" required></p><br>
+    <p>Children: <input type="number" ng-model="user.children" placeholder="0" required></p>
+    <p>Adults: <input type="number" ng-model="user.adults" placeholder="0" required></p>
+    <p>Start Date: <input type="date" ng-model="user.start" required></p>
+    <p>End Date: <input type="date" ng-model="user.end" required></p><br>
+    <button ng-click="submit()">Submit</button>
+    <button ng-click="reset()" formnovalidate>Reset</button>
+  </form>
 </div>
 
+<script type="text/javascript">
+var app = angular.module('infoForm', []);
+app.controller('formCont', function($scope) {
+    $scope.master = {firstName: "", lastName: "", email="", phone="", children="", adults="", start="", end=""};
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+    };
+    $scope.reset();
+});
 
+</script>
 
 </body>
 </html>
