@@ -23,6 +23,7 @@
     <img src="images/megaTravelLogo.jpg" alt="Mega Travel" style="width:15%;">
   </div>
 
+    <!-- Dropdown with list of destinations -->
     <div id="activities" class="container-fluid text-center">
         <h3>See destination activities</h3>
           <form>
@@ -36,7 +37,7 @@
             </select>
           </form>
 
-
+      <!-- angular fetches the activity list and puts them in a carousel -->
       <div ng-switch="destinations">
         <div ng-switch-when="australia">
           <div class="container">
@@ -342,6 +343,7 @@
 </div>
 </div>
 
+<!-- Form -->
 <div id="theForm" class="container-fluid text-center" ng-app="infoForm" ng-controller="formCont">
   <form class="" action="index.html" method="">
     <p>First Name:  <input type="text" ng-model="user.firstName" placeholder="First Name" style="max-width:90px;" required></p>
